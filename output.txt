@@ -1,0 +1,17 @@
+ORGANIZATIONAL HIERARCHY
+=========================
+
+Level Order Traversal:
+CEO HR Finance IT Development Testing Frontend Backend
+
+Tree Height = 3 edges
+Number of Levels = 4
+
+SEARCH COMPARISON
+=================
+Department      Linear          Binary
+---------------------------------------------
+HR              1               2
+Development     4               3
+Finance         2               1
+Backend         7               3

@@ -1,0 +1,105 @@
+
+======================================================================
+LEVEL-ORDER TRAVERSAL TRACE
+======================================================================
+
+LEVEL-ORDER TRAVERSAL TRACE
+
+Queue starts with CEO.
+
+| Step | Deleted | Children Added          | Queue After Step              | Output       |
+|------|---------|-------------------------|-------------------------------|--------------|
+| 1    | CEO     | HR, Finance, IT         | HR, Finance, IT               | CEO          |
+| 2    | HR      | None                    | Finance, IT                   | HR           |
+| 3    | Finance | None                    | IT                            | Finance      |
+| 4    | IT      | Development, Testing    | Development, Testing          | IT           |
+| 5    | Development | Frontend, Backend   | Testing, Frontend, Backend    | Development  |
+| 6    | Testing | None                    | Frontend, Backend             | Testing      |
+| 7    | Frontend| None                    | Backend                       | Frontend     |
+| 8    | Backend | None                    | Empty                         | Backend      |
+
+Final traversal:
+CEO -> HR -> Finance -> IT -> Development -> Testing -> Frontend -> Backend
+
+
+======================================================================
+LINEAR SEARCH TRACE
+======================================================================
+
+LINEAR SEARCH TRACE
+
+Department list:
+Index 0: HR
+Index 1: Finance
+Index 2: IT
+Index 3: Development
+Index 4: Testing
+Index 5: Frontend
+Index 6: Backend
+
+Search 1: HR
+1. Compare HR with HR -> FOUND
+Comparisons = 1
+
+Search 2: Development
+1. HR -> Not found
+2. Finance -> Not found
+3. IT -> Not found
+4. Development -> FOUND
+Comparisons = 4
+
+Search 3: Finance
+1. HR -> Not found
+2. Finance -> FOUND
+Comparisons = 2
+
+Search 4: Backend
+1. HR -> Not found
+2. Finance -> Not found
+3. IT -> Not found
+4. Development -> Not found
+5. Testing -> Not found
+6. Frontend -> Not found
+7. Backend -> FOUND
+Comparisons = 7
+
+
+======================================================================
+BINARY SEARCH TRACE
+======================================================================
+
+BINARY SEARCH TRACE
+
+Sorted department list:
+Index 0: Backend
+Index 1: Development
+Index 2: Finance
+Index 3: Frontend
+Index 4: HR
+Index 5: IT
+Index 6: Testing
+
+Search 1: HR
+1. Middle = Frontend -> HR is greater
+2. Middle = IT -> HR is smaller
+FOUND at HR
+Comparisons = 2
+
+Search 2: Development
+1. Middle = Frontend -> Development is smaller
+2. Middle = Backend -> Development is greater
+3. Development -> FOUND
+Comparisons = 3
+
+Search 3: Finance
+1. Middle = Frontend -> Finance is smaller
+2. Development -> Finance is greater
+3. Finance -> FOUND
+Comparisons = 3
+
+Search 4: Backend
+1. Middle = Frontend -> Backend is smaller
+2. Middle = Development -> Backend is smaller
+3. Backend -> FOUND
+Comparisons = 3
+
